@@ -2,7 +2,10 @@ import logging.config
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
-from internal_middleware import build_user_context_middleware
+from internal_middleware import (
+    build_request_id_middleware,
+    build_user_context_middleware,
+)
 
 from app.client.gateway_client import GatewayClient
 from app.utils.logging import LOGGING_CONFIG
@@ -33,6 +36,7 @@ def create_app() -> FastAPI:
         openapi_url="/api/accommodations/openapi.json",
     )
 
+    app.middleware("http")(build_request_id_middleware(logger=logger))
     app.middleware("http")(build_user_context_middleware(logger=logger))
 
     @app.get("/api/accommodations/health")
