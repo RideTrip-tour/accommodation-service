@@ -7,7 +7,7 @@ from internal_middleware import (
     build_user_context_middleware,
 )
 
-from app.client.gateway_client import GatewayClient
+from app.client.client import GatewayClient
 from app.routes.accommodation_routes import router as accommodation_router
 from app.routes.admin_routes import router as admin_router
 from app.routes.references_routes import router as references_router

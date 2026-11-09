@@ -15,17 +15,17 @@ class Settings(BaseSettings):
     jwt_algorithm: str = "HS256"
 
     db_host: str = Field(
-        validation_alias="DB_ACCOMMODATION_SERVICE_HOST", default="postgres"
+        validation_alias="DB_ACCOMMODATION_SERVICE_HOST", default="127.0.0.1"
     )
     db_port: int = Field(validation_alias="DB_ACCOMMODATION_SERVICE_PORT", default=5432)
     db_name: str = Field(
-        validation_alias="DB_ACCOMMODATION_SERVICE_NAME", default="accommodation_db"
+        validation_alias="DB_ACCOMMODATION_SERVICE_NAME", default="rrt"
     )
     db_user: str = Field(
-        validation_alias="DB_ACCOMMODATION_SERVICE_USER", default="user"
+        validation_alias="DB_ACCOMMODATION_SERVICE_USER", default="platform"
     )
     db_pass: str = Field(
-        validation_alias="DB_ACCOMMODATION_SERVICE_PASS", default="password123"
+        validation_alias="DB_ACCOMMODATION_SERVICE_PASS", default="12345"
     )
     db_driver: str = "postgresql+asyncpg"
     test_db_name: str = Field(
