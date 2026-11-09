@@ -4,7 +4,7 @@ import jwt
 import pytest
 from internal_middleware import user_claims
 
-from app.client.gateway_client import GatewayClient
+from app.client.client import GatewayClient
 
 
 @pytest.fixture(autouse=True)
@@ -16,7 +16,7 @@ def reset_singleton():
 
 @pytest.fixture
 def settings_patch(monkeypatch):
-    from app.client import gateway_client as gc_module
+    from app.client import client as gc_module
 
     class FakeSettings:
         gateway_url = "http://gateway.test"
