@@ -11,7 +11,6 @@ if str(ROOT) not in sys.path:
 
 os.environ["DEBUG"] = "false"
 
-
 from main import create_app
 
 
