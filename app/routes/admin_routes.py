@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status
 
 router = APIRouter(
-    prefix="/api/admin/accommodation",
+    prefix="/api/admin/accommodations",
     tags=["Admin"],
 )
 
