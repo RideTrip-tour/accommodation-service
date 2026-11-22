@@ -74,7 +74,7 @@ jobs:
     uses: RideTrip-tour/ci-templates/.github/workflows/swarm-healthcheck.yml@1ea20e0f3eef0c509201b91ee307a5be4d0ea489
     with:
       service-name: ${{ vars.SERVICE_ACCOMMODATION_NAME || 'accommodation-service' }}
-      app-name: ${{ vars.APP_NAME || 'accommodation' }}
+      app-name: ${{ vars.APP_NAME || 'accommodations' }}
       data-network: ${{ vars.DATA_NETWORK || 'data-network' }}
       environment: DEV
     secrets: inherit
