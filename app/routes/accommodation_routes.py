@@ -11,8 +11,8 @@ from app.schemas.accommodation import (
 )
 
 router = APIRouter(
-    prefix="/api/accommodation",
-    tags=["accommodation"],
+    prefix="/api/accommodations",
+    tags=["accommodations"],
 )
 
 
